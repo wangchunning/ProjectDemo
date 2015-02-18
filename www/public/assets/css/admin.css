@@ -1,0 +1,155 @@
+body{
+    background: none repeat scroll 0% 0% #EBECF1;
+}
+
+/**
+ * 全局 affix
+ */
+ #command-affix {width: 150px;}
+.affix{position:fixed;top:30px;}
+.affix-bottom{position:absolute;}
+
+/*login*/
+.login-form{
+    padding: 10px 20px 20px 20px;
+}
+
+
+/* Admin login */
+body.admin-login .login-body{
+	max-width: 500px;
+	margin: 20px auto;
+	padding-bottom: 20px;
+}
+
+body.admin-login .footer{border-top: 1px solid #ccc;padding-top: 20px;color: #787878;}
+body.admin-login .login-body .expired{border-color: #CCC; background-color: #EEE;}
+body.admin-login .login-body #security_code{width: 100px;display: inline-block;margin-right: 10px;border-color: #ccc}
+body.admin-login .login-body .dblock{margin-top: 0;margin-bottom: 5px;margin-left: 10px;vertical-align: bottom;}
+
+.tx-detail-status{ 
+	border: 1px dotted #FFF;
+	color: #FFF;
+	text-align: center;
+	padding: 5px 10px;
+}
+.tx-detail-status p{margin:0;}
+
+.tx-action-btn {width: 150px;}
+
+
+
+
+
+
+
+
+
+/* Admin user */
+body.admin .invite-user-btn{padding: 2px 10px;}
+body.admin .manager-detail .form-group label{padding-top: 7px;margin-bottom: 0;margin-top: 0;}
+body.admin .account-type{
+    display:inline-block;
+    max-width:40%;
+    overflow: hidden;
+    vertical-align: top;
+    padding-left: 5px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.table td.action-block {padding-top: 5px; padding-bottom: 5px;}
+.action-block .actions {display: none;}
+.actions .dropdown-toggle {padding: 1px 6px 0px 6px; }
+.action-block .btn-group .dropdown-menu {min-width: 100px; }
+
+/* Admin user logs */
+body.admin .log-desc{
+    max-width: 350px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 40%;
+    cursor: pointer;
+}
+body.admin .bank-log .log-desc{
+    max-width: 260px;
+}
+@media (min-width: 768px) {
+    body.admin .date-pick{display: inline-block;}
+    form.navbar-form {padding-left: 0;}
+}
+.date-pick .form-group{position: relative;}
+.date-pick .form-group .fa{
+    color: #7c0000;
+    font-size: 18px;
+    position: absolute;
+    right: 5px;
+    top: 8px;
+}
+
+/* Admin setting */
+body.admin #setting p.desc{height: 140px;overflow: hidden;}
+body.admin .add-role {padding: 2px 10px;}
+body.admin .role-manage .row .col-sm-4{
+    line-height: 2;
+}
+
+body.admin .role-name{
+    color: #666;
+    display: inline-block;
+    max-width: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: inherit;
+}
+.dropdown-menu .role_n{
+    display: inline-block;
+    max-width: 120px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    vertical-align: bottom;
+}
+
+/* Admin Customer Overview */
+#overview-profile-panel p strong{width: 100px;display: inline-block;}
+
+.panel-heading h5{margin: 0;}
+
+#lock-rate-pannel .pannel-body{padding: 10px;}
+.equal-label{font-weight: bold;font-size: 18px;margin: 0 10px;}
+
+/* Admin transactions */
+body.admin .transaction-detail .user-detail .label{vertical-align: middle;}
+body.admin .transaction-detail .transaction-note .desc{margin-top: 10px;}
+body.admin .transaction-detail .transaction-note .desc > div{padding: 10px;border:1px dotted #DDDDDD;}
+.transaction-detail .transaction-note .desc p a{margin-left: 5px;}
+.transaction-detail .transaction-note .desc-show{margin-bottom: 0;}
+.transaction-detail .transaction-note .desc-input{display: none;}
+.transaction-detail .transaction-note .desc-input input{width: 70%;display: inline-block;}
+body.admin .transaction .amount{font-weight: bold;}
+body.admin .transaction-action .btn{width: 150px;}
+.label-grey{background-color: #666;}
+.transaction-detail .bank-panel .no-padding{padding-left: 0;padding-right: 0;}
+.transaction-detail .bank-panel .no-padding a {margin-left: 5px;}
+.transaction-detail .bank-panel .actions{display: none;}
+.transaction-detail #add-bank-panel {border:1px dashed #eee;padding: 20px;}
+
+/* Admin Notes */
+#note-panel .desc{margin-top: 10px;}
+#note-panel .desc > div{padding: 10px;border:1px dotted #DDDDDD;}
+#note-panel .desc p a{margin-left: 5px;}
+#note-panel .desc-show{margin-bottom: 0;}
+#note-panel .desc-input{display: none;}
+#note-panel .desc-input input{width: 70%;display: inline-block;}
+
+.converter-pannel label {font-weight: normal;color:#737373;font-size: 12px;}
+.converter-pannel .symbol{margin: 0 15px 0 10px;}
+#lock-rate-pannel .spot-rate{background-color: #eee;padding:10px;line-height: 38px;}
+#lock-rate-pannel .spot-rate p{margin: 0}
+#lock-rate-pannel span.equal-label{font-weight: bolder;font-size: 32px;color:#428bca;}
+#lock-rate-pannel .well{padding:10px 5px;}
+#lock-rate-pannel #rate-label{font-size: 24px;color:#FF6600;}
+#lock-rate-pannel .rate-pannel{display: none;}
+#lock-rate-pannel #count-down{line-height: 34px;font-size: 20px;margin-left:20px;width: 57px;}

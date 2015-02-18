@@ -1,0 +1,1 @@
+<div class="container bread-crumb mt10 f14p color-666 noprint">{{ Breadcrumb::build('html', null, TRUE, ' > ') }}</div>
