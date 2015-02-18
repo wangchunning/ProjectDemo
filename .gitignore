@@ -42,5 +42,5 @@ www/bootstrap/compiled.php
 www/vendor/*
 www/composer.lock
 www/.DS_Store
-#www/app/config/database.php
-www/public/upload/*
+www/app/config/database.php
+www/public/uploads/*
