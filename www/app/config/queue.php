@@ -42,10 +42,10 @@ return array(
 
 		'sqs' => array(
 			'driver' => 'sqs',
-			//'key'    => 'AKIAJRHYTHGUMHPLAIEQ',
-			//'secret' => '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',
-			//'queue'  => 'https://sqs.ap-northeast-1.amazonaws.com/446356641270/email-sms',
-			//'region' => 'ap-northeast-1',
+			//'key'    => '',
+			//'secret' => '',
+			//'queue'  => '',
+			//'region' => '',
 		),
 
 		'iron' => array(
