@@ -1,4 +1,4 @@
-<?php namespace Tt\Model;
+<?php namespace Lib\Model;
 
 use Zizaco\Entrust\EntrustRole;
 

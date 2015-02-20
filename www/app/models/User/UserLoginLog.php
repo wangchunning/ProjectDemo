@@ -1,4 +1,4 @@
-<?php namespace Tt\Model;
+<?php namespace Model;
 
 
 class UserLoginLog extends \Eloquent {

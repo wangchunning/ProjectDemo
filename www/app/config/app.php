@@ -39,8 +39,8 @@ return array(
 	|
 	*/
 
-	'timezone' => 'PRC',
-
+	//'timezone' => 'PRC',
+	'timezone' => 'Australia/Sydney',
 	/*
 	|--------------------------------------------------------------------------
 	| Application Locale Configuration
@@ -65,7 +65,7 @@ return array(
 	|
 	*/
 
-	'key' => '',
+	'key' => '0Fpfye3jcrtrryZKJJIDFDPKjZXTQyLl',
 		
 	'cipher' => MCRYPT_RIJNDAEL_128,
 		
@@ -109,26 +109,33 @@ return array(
 		'Illuminate\View\ViewServiceProvider',
 		'Illuminate\Workbench\WorkbenchServiceProvider',
 		
+		/**
+		 * 第三方 service
+		 */
+		/* 前后台同时登录 */
 		'Ollieread\Multiauth\MultiauthServiceProvider',
 		'Ollieread\Multiauth\Reminders\ReminderServiceProvider',
-			
+		/* 队列服务 */
 		'Twilio\Laratwilio\LaratwilioServiceProvider',
+		
 		'Mews\Captcha\CaptchaServiceProvider',
-		'Tt\FundInterface\FundInterfaceServiceProvider',
-		'Tt\Email\EmailServiceProvider',
-		'Tt\Ip2loc\Ip2locServiceProvider',
-		'Tt\Pincode\PincodeServiceProvider',
-		'Tt\ID5\ID5ServiceProvider',
+		/* 面包屑 */
 		'Noherczeg\Breadcrumb\BreadcrumbServiceProvider',
-		//'Tt\Entrust\EntrustServiceProvider',
+		/* 防注入 */
 		'Frozennode\XssInput\XssInputServiceProvider',
+		/* 后台角色权限系统 */
 		'Zizaco\Entrust\EntrustServiceProvider',
-		'Tt\TXSession\TXSessionServiceProvider',
+		/**
+		 * 自定义 service
+		 */
+		'Lib\Email\EmailServiceProvider',
+		'Lib\Pincode\PincodeServiceProvider',
+		'Lib\TXSession\TXSessionServiceProvider',
 		/**
 		 * 业务相关的 service
 		 */
-		'Tt\LoginService\LoginServiceProvider',
-		'Tt\UserService\UserServiceProvider',
+		'Lib\LoginService\LoginServiceProvider',
+		'Lib\UserService\UserServiceProvider',
 			
 
 	),
@@ -206,66 +213,41 @@ return array(
 		'Captcha'         	=> 'Mews\Captcha\Facades\Captcha',
         'Carbon'         	=> 'Carbon\Carbon',
         'Breadcrumb' 	 	=> 'Noherczeg\Breadcrumb\Facades\Breadcrumb',
-        'FundInterface'     => 'Tt\FundInterface\Facades\FundInterface',
-        'EmailProvider'   	=> 'Tt\Email\Facades\EmailProvider',
-        'Pincode'         	=> 'Tt\Pincode\Facades\Pincode',
-        'ID5'		  		=> 'Tt\ID5\Facades\ID5',
+        'EmailProvider'   	=> 'Lib\Email\Facades\EmailProvider',
+        'Pincode'         	=> 'Lib\Pincode\Facades\Pincode',
 		'Ip2loc'		  	=> 'Zhuzhichao\IpLocationZh\Ip',
 		'Entrust'    		=> 'Zizaco\Entrust\EntrustFacade',
 			
 		/**
 		 * 业务相关的 Service, 主要针对前台，便于后面提供给手机端
 		 */
-		'Ret'				=> 'Tt\Ret\Ret',
-		'TXSession'       	=> 'Tt\TXSession\Facades\TXSession',
-		'Fee'				=> 'Tt\Fee\Fee',
-		'LoginService'		=> 'Tt\LoginService\Facades\LoginService',
-		'UserService'		=> 'Tt\UserService\Facades\UserService',
+		/* 返回值 */
+		'Ret'				=> 'Lib\Ret\Ret',
+		'TXSession'       	=> 'Lib\TXSession\Facades\TXSession',
+		'LoginService'		=> 'Lib\LoginService\Facades\LoginService',
+		'UserService'		=> 'Lib\UserService\Facades\UserService',
+			
 		/**
-		 * Model 别名
+		 * Model 
 		 */
 		// users
-		'User'            => 'Tt\Model\User',
-		'UserProfile'     => 'Tt\Model\UserProfile',
-		'Administrator'	  => 'Tt\Model\Administrator',
-		'Verification'    => 'Tt\Model\Verification',
-		'UserBankAccount' => 'Tt\Model\UserBankAccount',
+		'User'            => 'Model\User',
+		'UserProfile'     => 'Model\UserProfile',
+		'Administrator'	  => 'Model\Administrator',
+		'Verification'    => 'Model\Verification',
 		
 		// logs
-		'UserLoginLog'    => 'Tt\Model\UserLoginLog',
-		'UserAccessLog'   => 'Tt\Model\UserAccessLog',
-		'AdminLoginLog'   => 'Tt\Model\AdministratorLoginLog',
-		'AdminAccessLog'  => 'Tt\Model\AdministratorAccessLog',
-		'AdminActivityLog'=> 'Tt\Model\AdministratorActivityLog',
+		'UserLoginLog'    => 'Model\UserLoginLog',
+		'UserAccessLog'   => 'Model\UserAccessLog',
+		'AdminLoginLog'   => 'Model\AdministratorLoginLog',
+		'AdminAccessLog'  => 'Model\AdministratorAccessLog',
+		'AdminActivityLog'=> 'Model\AdministratorActivityLog',
 			
 		// roles
-        'Role'            => 'Tt\Model\Role',
-        'Permission'      => 'Tt\Model\Permission',
-			
-        // credit
-		'CreditLevel'     => 'Tt\Model\CreditLevel',
-			
-		// balance
-		'Balance'     		=> 'Tt\Model\Balance',
-		'BalanceHistory'	=> 'Tt\Model\BalanceHistory',
+        'Role'            => 'Model\Role',
+        'Permission'      => 'Model\Permission',
 
-		// tx
-		'Tx'				=> 'Tt\Model\Transaction',
-		'Repayment'			=> 'Tt\Model\Repayment',
-		'Material'			=> 'Tt\Model\Material',
-			
-		'DepositTx'			=> 'Tt\Model\DepositTransaction',
-		'WithdrawTx'		=> 'Tt\Model\WithdrawTransaction',
-		'DebtTx'			=> 'Tt\Model\DebtTransaction',
-		'DebtTxProfile'		=> 'Tt\Model\DebtTransactionProfile',
-		'DebtTxMaterial'	=> 'Tt\Model\DebtTransactionMaterial',
 
-		// invest
-		'DebtInvest'		=> 'Tt\Model\DebtInvest',
-		'DebtInvestDetail'	=> 'Tt\Model\DebtInvestBenefitDetail',
-		
-		// repayment
-		'DebtRepayDetail'	=> 'Tt\Model\DebtRepaymentDetail',
 	),
 
 );

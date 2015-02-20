@@ -1,4 +1,4 @@
-<?php namespace WeXchange\Model;
+<?php namespace Model;
 
 
 class Pwd_reminder extends \Eloquent {

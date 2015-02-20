@@ -42,10 +42,10 @@ return array(
 
 		'sqs' => array(
 			'driver' => 'sqs',
-			//'key'    => '',
-			//'secret' => '',
-			//'queue'  => '',
-			//'region' => '',
+			'key'    => '',
+			'secret' => '',
+			'queue'  => '',
+			'region' => '',
 		),
 
 		'iron' => array(
