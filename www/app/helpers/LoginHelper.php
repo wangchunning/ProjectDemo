@@ -19,7 +19,7 @@ if ( ! function_exists('is_login'))
         if (($type == Administrator::LABEL && 
         		Auth::admin()->check()) ||
         	($type == User::LABEL && 
-        		Auth::client()->check()))
+        		Auth::user()->check()))
         {
             return true;
         }
@@ -79,7 +79,7 @@ if ( ! function_exists('login_user'))
 	{
 		if ($type == User::LABEL)
 		{
-			return Auth::client()->user();	
+			return Auth::user()->user();	
 		}
 		else if ($type == Administrator::LABEL)
 		{

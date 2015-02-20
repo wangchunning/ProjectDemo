@@ -23,7 +23,7 @@
 			"app/tests/TestCase.php"
 		],
 		"psr-0": {
-			"Tt": "app/lib"   
+			"Lib\\": "app/lib"   
         }
 	},
 	"scripts": {
