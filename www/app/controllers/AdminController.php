@@ -1,12 +1,8 @@
 <?php namespace Controllers;
 
-use View;
-
 /**
- *  后台管理控制器父类
+ *  后台管理父类
  *
- *  @author     Kshan <kshan@qq.com>
- *  @copyright  2013 ZOYU Solution Pty. Ltd.
  */
 Class AdminController extends BaseController {
 

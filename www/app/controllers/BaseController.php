@@ -1,11 +1,9 @@
 <?php namespace Controllers;
 
 use View;
-use Session;
-use Response;
 
 /**
- *  Parent controller for all pages
+ *  前后台所有控制器父类
  *
  *  It should be extended by almost all child controllers, which require 
  *  {@see http://laravel.com/docs/templates layout} and other common 
@@ -30,6 +28,11 @@ class BaseController extends \Controller {
     {
         // Make sure the CSRF token is attached to the reponse automatically
         $this->data['_token'] = Session::token();
+        
+        /**
+         * 清洗用户输入数据，去掉空格等
+         */
+        Input::merge(array_map('trim', Input::all()));
     }    
 
 	/**
@@ -44,16 +47,5 @@ class BaseController extends \Controller {
 			$this->layout = View::make($this->layout);
 		}
 	}
-
-    /**
-     * Helper function to help the Json data pushed to the client
-     *
-     * @param  string    Status of the process: {'ok', 'error'}
-     * @param  mixed     Data to be pushed to the client.
-     * @return \Response Encoded json data string
-     */
-    protected function push($status, $data = array())
-    {
-        return Response::json(compact('status', 'data'));
-    }    
+   
 }

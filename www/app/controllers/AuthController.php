@@ -3,10 +3,8 @@
 use View;
 
 /**
- *  Parent controller for all pages
+ *  前台页面父类
  *
- *  @author     Kshan <kshan@qq.com>
- *  @copyright  2013 ZOYU Solution Pty. Ltd.
  */
 Class AuthController extends BaseController {
 
@@ -14,7 +12,7 @@ Class AuthController extends BaseController {
     /**
      * default entries for 'show more' feature
      */
-    const DEFAULT_SHOW_MORE_ENTRIES = 50;
+    //const DEFAULT_SHOW_MORE_ENTRIES = 50;
 
     /**
      * Setup the shared authentication procedures
